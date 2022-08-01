@@ -15,36 +15,36 @@
         'use strict';
 
         // 1% ErrorBoundary
-        // class LikeButton extends React.Component{
-        //     state = {liked: true}
-        //
-        //     onClickButton = () => {
-        //         this.setState({liked: true});
-        //     }
-        //
-        //     render() {
-        //         if(this.state.liked){
-        //             return 'You liked this.';
-        //         }
-        //
-        //         // return React.createElement('button', {onClick: () => this.setState({liked:true})}, 'Like');
-        //         return (
-        //             <button onClick={this.onClickButton}>Like</button>
-        //         )
-        //     }
-        // }
+        class LikeButton extends React.Component{
+            state = {liked: true}
+
+            onClickButton = () => {
+                this.setState({liked: true});
+            }
+
+            render() {
+                if(this.state.liked){
+                    return 'You liked this.';
+                }
+
+                // return React.createElement('button', {onClick: () => this.setState({liked:true})}, 'Like');
+                return (
+                    <button onClick={this.onClickButton}>Like</button>
+                )
+            }
+        }
 
         // 함수형 컴포넌트 X / 함수 컴포넌트 O
-        function LikeButton() {
-            const [liked, setLiked] = React.useState(false);
-
-            if(liked){
-                return 'You liked this.';
-            }
-            return(
-                <button onClick={() => {setLiked(true)}}>Like</button>
-            )
-        }
+        // function LikeButton() {
+        //     const [liked, setLiked] = React.useState(false);
+        //
+        //     if(liked){
+        //         return 'You liked this.';
+        //     }
+        //     return(
+        //         <button onClick={() => {setLiked(true)}}>Like</button>
+        //     )
+        // }
     </script>
     <script type="text/babel">
         // ReactDOM.render(<LikeButton />, document.querySelector('#root')); // React 17버전 코드
